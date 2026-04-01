@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register - Phethelo Molapo Foundation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .register-box{
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        h2{
+            text-align: center;
+            color: #1f2d3d;
+            margin-bottom: 25px;
+        }
+        input[type="text"], input[type="email"], input[type="password"]{
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"]{
+            width: 100%;
+            padding: 14px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover{
+            background-color: #219150;
+        }
+        .login-link{
+            text-align: center;
+            margin-top: 15px;
+        }
+        .login-link a{
+            color: #27ae60;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div class="register-box">
+            <h2>Register</h2>
+
+            <form action="RegisterServlet" method="post">
+                <input type="text" name="fullName" placeholder="Full Name" required><br>
+                <input type="email" name="email" placeholder="Email" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" required><br>
+                <input type="submit" value="Register">
+            </form>
+
+            <div class="login-link">
+                <p>Already have an account? <a href="Login.html">Login here</a></p>
+            </div>
+        </div>
+
+    </body>
+</html>
