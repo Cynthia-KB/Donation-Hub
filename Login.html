@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
     <head>
         <title>Login - Phethelo Molapo Foundation</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <style>
         body{
             font-family: Arial, sans-serif;
@@ -60,21 +56,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             font-weight: bold;
         }
     </style>
-        
     </head>
+
     <body>
-        
+
         <div class="login-box">
-        <h2>Login</h2>
-        <form action="#">
-            <input type="email" placeholder="Email" required><br>
-            <input type="password" placeholder="Password" required><br>
-            <input type="submit" value="Login">
-        </form>
-        <div class="register-link">
-            <p>Don't have an account? <a href="Register.html">Register here</a></p>
+            <h2>Login</h2>
+              
+            <form action="LoginServlet" method="post">
+                <input type="hidden" name="redirect" id="redirectField">
+                <input type="email" name="email" placeholder="Email" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <input type="submit" value="Login">
+            </form>
+      
+            <div class="register-link">
+                <p>Don't have an account? <a href="Register.html">Register here</a></p>
+            </div>
+            
         </div>
-    </div>
-        
+           <script>
+            const params = new URLSearchParams(window.location.search);
+            const redirect = params.get("redirect");
+
+            if (redirect) {
+            document.getElementById("redirectField").value = redirect;
+             }
+           </script>
     </body>
 </html>
