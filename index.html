@@ -203,7 +203,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <a href="Login.html">Login</a>
             <a href="Register.html">Register</a>
             <a href="donateMoney.html">Donate Money</a>
-            <a href="donateItems.html">Donate Items</a>
+            <a href="donateItemsLogin.html">Donate Items</a>
             <a href="contact.jsp">Contact</a>
         </nav>
 
@@ -215,8 +215,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     who are in need. Through financial donations and material support, we help
                     provide the essential resources children need to learn, grow and succeed.
                 </p>
-                <a href="login.html" class="btn">Login to Donate</a>
-                <a href="register.html" class="btn">Register</a>
+                <a href="Login.html" class="btn">Login to Donate</a>
+                <a href="Register.html" class="btn">Register</a>
             </div>
         </section>
 
@@ -226,12 +226,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     border-radius: 12px;
 ">
 
-    <!-- TITLE (on top) -->
+    
     <h2 style="text-align:center; margin-bottom: 30px;">
         Honoring Phethelo Molapo
     </h2>
 
-    <!-- MAIN LAYOUT -->
+   
     <div style="
         display: flex;
         align-items: center;
@@ -239,7 +239,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         flex-wrap: wrap;
     ">
 
-        <!-- LEFT: TEXT -->
+        
         <div style="flex: 1; min-width: 280px;">
             <p>
                 Phethelo Molapo was a young boy whose life was well lived but robbed by death
@@ -253,7 +253,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             </p>
         </div>
 
-        <!-- RIGHT: IMAGE GRID -->
+       
         <div style="
             flex: 1;
             min-width: 250px;
@@ -286,7 +286,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         Every contribution, no matter how small, helps create hope and opens doors
                         for a child’s future.
                     </p>
-                    <a href="donateMoney.html" class="btn">Donate Now</a>
+                    <a href="Login.html?redirect=paymentMethods.html" class="btn">Donate Now</a>
                 </div>
 
                 <div class="card">
@@ -295,7 +295,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         Donate school shoes, uniforms, books, stationery, food parcels, clothing,
                         blankets and other useful items for learners in need.
                     </p>
-                    <a href="donateItems.html" class="btn">Donate Items</a>
+                    <a href="Login.html?redirect=donateItems.html" class="btn">Donate Items</a>
                 </div>
 
                 <div class="card">
@@ -312,10 +312,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                  <p>
                     Help us spread our advocacy to your friends, family and colleagues.
                 </p>
-                <a href="contact.jsp" class="btn">Support Us</a>
+                <button class="btn" onclick="copyLink()">Copy Website Link</button>
+                </div>
+
+                <script>
+                 function copyLink() {
+                 const siteURL = "https://cynthia-kb.github.io/Donation-Hub/"; 
+                 navigator.clipboard.writeText(siteURL).then(() => {
+                  alert("Website link copied! Share it with your friends.");
+                 });
+                   }
+                 </script>
                 </div>
                 
-            </div>
+           
         </section>
 
         <footer>
